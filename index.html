@@ -1,48 +1,188 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>Assignment 2 - Delgado</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2
-						<aside class="notes">
-						<p>Some notes</p>
-						</aside>
-						<p>Some slide text</p>
-						<aside class="notes">
-						<p>and some more notes</p>
-					</aside>
-				</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/night.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				Internet Programming
+				<p>Joseph Delgado</p>
+				<p>Computer Science (Information Systems)</p>
+			</section>
+			<section>First Impressions of Accessing World Wide Web</section>
+			<section>
+				<li>It was in 2014 (Middle School) in a computer lab</li>
+				<li>Open up Internet Explorer as the browser</li>
+				<li>Used Google as the search engine</li>
+				<li>Teacher showed us how to access a site and download a file</li>
+				<li>Used that file (software) to learn how to type efficiently</li>
+			</section>
+			<section>Computer's Relationship to Public Internet at that Time</section>
+			<section>
+				<li>Used Internet Explorer as browser, Google for search engine</li>
+				<li>School computers = connected through Ethernet</li>
+				<li>Computer lab connected to a switch</li>
+				<li>Switch connected to the main switch, then the school's router</li>
+				<li>Goes out the local network and to the Internet Service Provider</li>
+			</section>
+			<section>Diagram of Old Computer's Relationship to the Public Internet</section>
+			<section>
+				<img src="images/past_diagram.png" alt="">
+			</section>
+			<section>Computer's Current Relationship to Public Internet</section>
+			<section>
+				<li>Main computer connected through Ethernet</li>
+				<li>Ethernet connected to Google Nests WiFi Nodes</li>
+				<li>Goes through modem and then out the wire</li>
+				<li>Xfinity (Comcast) Internet provider then manages in/out data</li>
+			</section>
+			<section>Diagram of Computers Current Relationship to Public Internet</section>
+			<section>
+				<img src="images/present_diagram.png" alt="">
+			</section>
+			<section>Revision of My Responses</section>
+			<section>
+				<h3 style="font-style: bold;">Here's a small timeline Southern Connecticut State
+					University!</h3>
+				<li>I've originally started as a nursing major at Southern.</li>
+				<li>I rediscovered my love for technology and computers.</li>
+				<li>I switched my major closer to the end of freshman year.</li>
+				<li>I worked as an IT Help Desk L2 student worker for SCSU's Office of Information Technology</li>
+			</section>
+			<section>
+				<ul>
+					<h3 style="font-style: bold;">Present Time</h3>
+					<p>My full major title is Computer Science with a concentration on Information Systems. I am
+						credited as a senior. I'm currently a IT Administrator as
+						a User Services Technician in Southern's OIT. I'm currently working on different projects such
+						as my personal portfolio using
+						the framework React. Check it out: <a href="https://zilatanium.github.io/personal-portfolio/"
+							target="_blank" style="color:blue">Personal Portfolio Link</a>!
+					</p>
+				</ul>
+			</section>
+			<section>
+				<h3 style="font-style: bold;">The future</h3>
+				<li>Have a stronger knowledge in popular frameworks like React.</li>
+				<li>Switch to a more programming oriented job to gain more experience.</li>
+				<li>Have more side projects in order to grow my knowledge in Web Development / Software Engineer.</li>
+				<li>Graduate Southern with at least a 3.9 GPA.</li>
+				<li style="font-weight: 700; color: red; font-style: italic;">Get a job at Google or Microsoft as a
+					Full-Stack / Front-End
+					Software Engineer.</li>
+			</section>
+			<section>Explain Style choices</section>
+			<section>
+				<pre><code data-trim data-noescape>
+					h3 style = "font-style: bold;"
+					// Here's a small timeline at Southern Connecticut University
+				</code></pre>
+				<li>Placed in the actual HTML h3 element tag</li>
+				<li>Using the bold style to show that it is the title of the slide</li>
+			</section>
+			<section>
+				<pre><code data-trim data-noescape>
+					a href = "https://zilatanium.github.io/personal-portfolio/" 
+					target="_blank" style:"color:blue;"
+					// Personal Portfolio Link
+				</code></pre>
+				<li>Placed in "a" HTML element</li>
+				<li>Changed the color to blue to signify that it is a link</li>
+				<li>Made the text clickable for the link and it opens a new tab</li>
+			</section>
+			<section>
+				<pre><code data-trim data-noescape>
+					li style="font-weight: 700; color:red; font-style: italic;"
+					// Get a job at Google or...
+				</code></pre>
+				<li>Placed in the "li" HTML element</li>
+				<li>Changed the font weight (essentially thickness) for stronger emphasis</li>
+				<li>Made it italics and red to make even more importance</li>
+			</section>
+			<section>Behavior Where the Presentation responds</section>
+			<section>
+				<pre><code code data-trim data-noescape>
+					/**
+					* Event handlers for navigation control buttons.
+					*/
+					onNavigateLeftClicked( event ) {
+
+						event.preventDefault();
+						this.Reveal.onUserInput();
+
+						if( this.Reveal.getConfig().navigationMode === 'linear' ) {
+							this.Reveal.prev();
+						}
+						else {
+							this.Reveal.left();
+						}
+
+					}
+				</code></pre>
+				<h3>The left control of the slides</h3>
+				<p style="font-size: 20px;">In summary, listens to when the left arrow button is clicked on the bottom right.
+					When it is determined to be clicked, the object Reveal (a javascript file) has logic where
+					the slide would move what's on the left of the slide array. Since we set our slides to have 
+					a linear fashion, our slides will move in a linear way.
+				</p>
+			</section>
+			<section>Another Way of Hosting a Website</section>
+			<section>
+				<h3>Using GitHub Pages</h3>
+				<li>Create a repository</li>
+				<li>Have a project directory with the HTML in it</li>
+				<li>Push the local repo to the remote repo, and deploy from branch</li>
+				<li>Save the branch for deployment</li>
+				<li>URL should be given to you</li>
+			</section>
+			<section>
+				<img src="images/github_pages.png" alt="">
+				<a href="https://pages.github.com/" target="_blank" style="color:blue;">Source: GitHub Pages (https://pages.github.com/)</a>
+			</section>
+			<section>Another Way of Making Content and Style</section>
+			<section>
+				<h3>Using Frameworks/Pre-made CSS</h3>
+				<p style="font-size: 30px;">This, for example, uses reveal.js which renders the HTML file using javascript and has
+					already made styles and configuration where the user can change. Changing something like 
+					this "link rel="stylesheet" href="dist/theme/night.css" allows me to change the theme of 
+					the presentation with already configured presentation themes.
+				</p>
+				<pp style="font-size: 30px;">Here's a link to their website and documentation to learn how to use it! 
+					<a href="https://revealjs.com/" target="_blank" style="color: blue;">Reveal.js</a> "The HTML 
+					Presentation Framework"</p>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
